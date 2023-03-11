@@ -4,10 +4,12 @@ import './normal.css';
 
 import { Configuration, OpenAIApi } from 'openai';
 
+const apiKey = import.meta.env.VITE_API_KEY;
+
 function App() {
 	const configuration = new Configuration({
 		organization: 'org-59LEeODrzV0RYH7nMyNJST7M',
-		apiKey: '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',
+		apiKey: apiKey,
 	});
 	const openai = new OpenAIApi(configuration);
 
